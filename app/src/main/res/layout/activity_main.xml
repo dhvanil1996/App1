@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity"
+>
+
+
+    <Button   android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/Tips"
+              android:id="@+id/tips_calc"
+              android:textSize="26sp"
+              android:padding="10dp"
+              android:layout_weight="1"
+              android:onClick="tipsActivity"
+    />
+    <Button   android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/Arithmatic"
+              android:id="@+id/arithmatic_calc"
+              android:textSize="26sp"
+              android:padding="10dp"
+              android:layout_weight="1"
+              android:onClick="calcActivity"
+
+    />
+    <Button   android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/BMI"
+              android:id="@+id/bmi_calc"
+              android:textSize="26sp"
+              android:padding="10dp"
+              android:layout_weight="1"
+              android:onClick="bmiActivity"
+
+
+    />
+    <Button   android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/Area"
+              android:id="@+id/area_calc"
+              android:textSize="26sp"
+              android:padding="10dp"
+              android:layout_weight="1"
+              android:onClick="areaActivity"
+
+
+    />
+
+</LinearLayout>

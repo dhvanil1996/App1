@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">App1</string>
+    <string name="Tips">Tips Calculator</string>
+    <string name="Arithmatic">Simple Calculator</string>
+    <string name="BMI">BMI Calculator</string>
+    <string name="Area">Area Calculator</string>
+
+    <string name="Bill_Amount">Bill Amount $</string>
+    <string name="Tip">    Tip %   </string>
+    <string name="Tip_Amount">Tip Amount</string>
+    <string name="Total_Price">Total Price</string>
+    <string name="Compute">Compute</string>
+    <string name="Split">Split</string>
+    <string name="PerPerson">Price Per Person</string>
+
+</resources>
