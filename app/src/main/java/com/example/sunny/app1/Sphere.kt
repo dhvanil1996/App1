@@ -39,7 +39,7 @@ class SphereActivity : AppCompatActivity(), TextWatcher  { // change class name 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 if (position == 0){
-                    startActivity( Intent(this@SphereActivity, MainActivity::class.java) )
+                    startActivity( Intent(this@SphereActivity, CubeActivity::class.java) )
                 }
 
                 if (position == 2){
