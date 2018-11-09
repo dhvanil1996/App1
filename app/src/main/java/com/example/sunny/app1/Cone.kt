@@ -39,7 +39,7 @@ class ConeActivity : AppCompatActivity(), TextWatcher  { // change class name to
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 if (position == 0){
-                    startActivity( Intent(this@ConeActivity, CubeActivity::class.java) )
+                    startActivity( Intent(this@ConeActivity, MainActivity::class.java) )
                 }
 
                 if (position == 1){
@@ -81,11 +81,11 @@ class ConeActivity : AppCompatActivity(), TextWatcher  { // change class name to
 
                         val answer_decimal = oneDecimal.format(answer);
 
-                        answerView?.setText(answer_decimal + " Area Cubed");
+                        answerView?.setText(answer_decimal + " Units Cubed");
 
                     }
                 } else
-                    answerView?.text = "0 Area Cubed"
+                    answerView?.text = "0 Units Cubed"
             }
         })
 
@@ -113,11 +113,11 @@ class ConeActivity : AppCompatActivity(), TextWatcher  { // change class name to
 
                         val answer_decimal = oneDecimal.format(answer);
 
-                        answerView?.setText(answer_decimal + " Area Cubed");
+                        answerView?.setText(answer_decimal + " Units Cubed");
 
                     }
                 } else
-                    answerView?.text = "0 Area Cubed"
+                    answerView?.text = "0 Units Cubed"
             }
         })
 
