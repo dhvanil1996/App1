@@ -39,7 +39,7 @@ class ConeActivity : AppCompatActivity(), TextWatcher  { // change class name to
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 if (position == 0){
-                    startActivity( Intent(this@ConeActivity, MainActivity::class.java) )
+                    startActivity( Intent(this@ConeActivity, CubeActivity::class.java) )
                 }
 
                 if (position == 1){
