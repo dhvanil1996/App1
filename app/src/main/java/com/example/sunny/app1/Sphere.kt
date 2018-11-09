@@ -39,7 +39,7 @@ class SphereActivity : AppCompatActivity(), TextWatcher  { // change class name 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 if (position == 0){
-                    startActivity( Intent(this@SphereActivity, CubeActivity::class.java) )
+                    startActivity( Intent(this@SphereActivity, MainActivity::class.java) )
                 }
 
                 if (position == 2){
@@ -75,11 +75,11 @@ class SphereActivity : AppCompatActivity(), TextWatcher  { // change class name 
 
                         val answer_decimal = oneDecimal.format(answer);
 
-                        answerView?.setText(answer_decimal + " Area Cubed");
+                        answerView?.setText(answer_decimal + " Units Cubed");
 
                     }
                 } else
-                    answerView?.text = "0 Area Cubed"
+                    answerView?.text = "0 Units Cubed"
             }
         })
     } // end of override OnCreate
