@@ -10,7 +10,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.DecimalFormat
 
-class CubeActivity : AppCompatActivity(), TextWatcher  {
+class MainActivity : AppCompatActivity(), TextWatcher  { // change class name to the name of the calculator
 
     var shapes = arrayOf("Cube", "Sphere", "Cone")
 
@@ -19,7 +19,7 @@ class CubeActivity : AppCompatActivity(), TextWatcher  {
 
         setTitle("Surface Area of a Cube")
 
-        setContentView(R.layout.activity_cube)
+        setContentView(R.layout.activity_main)
 
         var adapt = ArrayAdapter(this, android.R.layout.simple_spinner_item, shapes)
 
@@ -74,11 +74,11 @@ class CubeActivity : AppCompatActivity(), TextWatcher  {
 
                         val answer_decimal = oneDecimal.format(answer);
 
-                        answerView?.setText(answer_decimal + " Area Cubed");
+                        answerView?.setText(answer_decimal + " Units Cubed");
 
                     }
                 } else
-                    answerView?.text = "0 Area Cubed"
+                    answerView?.text = "0 Units Cubed"
             }
         })
 
@@ -100,11 +100,11 @@ class CubeActivity : AppCompatActivity(), TextWatcher  {
 
                         val answer_decimal = oneDecimal.format(answer);
 
-                        answerView?.setText(answer_decimal + " Area Cubed");
+                        answerView?.setText(answer_decimal + " Units Cubed");
 
                     }
                 } else
-                    answerView?.text = "0 Area Cubed"
+                    answerView?.text = "0 Units Cubed"
             }
         })
 
@@ -126,11 +126,11 @@ class CubeActivity : AppCompatActivity(), TextWatcher  {
 
                         val answer_decimal = oneDecimal.format(answer);
 
-                        answerView?.setText(answer_decimal + " Area Cubed");
+                        answerView?.setText(answer_decimal + " Units Cubed");
 
                     }
                 } else
-                    answerView?.text = "0 Area Sq."
+                    answerView?.text = "0 Units Cubed"
             }
         })
     } // end of override OnCreate
