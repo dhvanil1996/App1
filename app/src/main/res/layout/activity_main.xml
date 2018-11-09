@@ -50,5 +50,10 @@
 
 
     />
+  
+  <activity android:name=".BMIActivity"></activity>
+  <activity android:name=".SphereActivity"></activity>
+  <activity android:name=".ConeActivity"></activity>
+  <activity android:name=".CubeActivity"></activity>
 
 </LinearLayout>
