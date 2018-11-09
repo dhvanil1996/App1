@@ -10,7 +10,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.DecimalFormat
 
-class MainActivity : AppCompatActivity(), TextWatcher  { // change class name to the name of the calculator
+class CubeActivity : AppCompatActivity(), TextWatcher  {
 
     var shapes = arrayOf("Cube", "Sphere", "Cone")
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), TextWatcher  { // change class name to
 
         setTitle("Surface Area of a Cube")
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_cube)
 
         var adapt = ArrayAdapter(this, android.R.layout.simple_spinner_item, shapes)
 
