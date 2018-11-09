@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.CheckBox
 
 
-
 class Tips : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,14 +30,77 @@ class Tips : AppCompatActivity() {
         no_of_people.visibility = View.INVISIBLE
         price_per_person.visibility = View.INVISIBLE
 
+        var box_checked: Boolean? = null
+
+        split_bill.setOnClickListener {
+            if (split_bill.isChecked) {
+                per_person.visibility = View.VISIBLE
+                no_of_people.visibility = View.VISIBLE
+                price_per_person.visibility = View.VISIBLE
+                box_checked = true
+            } else {
+                per_person.visibility = View.INVISIBLE
+                no_of_people.visibility = View.INVISIBLE
+                price_per_person.visibility = View.INVISIBLE
+                box_checked = false
+            }
+        }
+
+
 
         result.setOnClickListener {
-                val bill_amount = (bill_input.text.toString()).toDouble()
-                val tip_amount = (tip_input.text.toString()).toDouble()
-                val total_amount = (bill_amount + (bill_amount * (tip_amount / 100)))
+            if (box_checked == true) {
+                val bill_amount: Double
+                val tip_amount: Double
+                val total_amount: Double
+                val people: Double
+                val individual_price: Double
 
-                show_result.setText(total_amount.toString())
+                if (!bill_input.text.isNullOrEmpty() && !tip_input.text.isNullOrEmpty() && !no_of_people.text.isNullOrEmpty()) {
+
+                    bill_amount = (bill_input.text.toString()).toDouble()
+                    tip_amount = (tip_input.text.toString()).toDouble()
+                    total_amount = (bill_amount + (bill_amount * (tip_amount / 100)))
+                    people = no_of_people.text.toString().toDouble()
+                    individual_price = total_amount / people
+                    per_person.setText(individual_price.toString())
+                    show_result.setText(total_amount.toString())
+                } else if (!bill_input.text.isNullOrEmpty() && tip_input.text.isNullOrEmpty() && !no_of_people.text.isNullOrEmpty()) {
+                    bill_amount = (bill_input.text.toString()).toDouble()
+                    people = no_of_people.text.toString().toDouble()
+                    individual_price = bill_amount / people
+                    per_person.setText(individual_price.toString())
+                    show_result.setText(bill_amount.toString())
+                } else if (!bill_input.text.isNullOrEmpty() && !tip_input.text.isNullOrEmpty() && no_of_people.text.isNullOrEmpty()) {
+                    bill_amount = (bill_input.text.toString()).toDouble()
+                    tip_amount = (tip_input.text.toString()).toDouble()
+                    total_amount = (bill_amount + (bill_amount * (tip_amount / 100)))
+                    show_result.setText(total_amount.toString())
+                    per_person.setText("")
+                } else {
+                    show_result.setText("")
+                    per_person.setText("")
+                }
+
+            } else if (box_checked == false || box_checked == null) {
+                if (!bill_input.text.isNullOrEmpty()) {
+                    val bill_amount = (bill_input.text.toString()).toDouble()
+                    if (!tip_input.text.isNullOrEmpty()) {
+                        val tip_amount = (tip_input.text.toString()).toDouble()
+                        val total_amount = (bill_amount + (bill_amount * (tip_amount / 100)))
+                        show_result.setText(total_amount.toString())
+                    } else {
+                        show_result.setText(bill_amount.toString())
+                    }
+                } else {
+                    show_result.setText("")
+                }
+
+            }
+
 
         }
+
     }
 }
+

@@ -1,16 +1,29 @@
 <resources>
+
+    <!-- App Name -->
     <string name="app_name">App1</string>
+
+    <!-- Main Activity -->
     <string name="Tips">Tips Calculator</string>
-    <string name="Arithmatic">Simple Calculator</string>
+    <string name="Arithmatic">Sales tax Calculator</string>
     <string name="BMI">BMI Calculator</string>
     <string name="Area">Area Calculator</string>
 
+    <!-- Tips Calculator Values  -->
     <string name="Bill_Amount">Bill Amount $</string>
-    <string name="Tip">    Tip %   </string>
+    <string name="Tip">Tip %</string>
     <string name="Tip_Amount">Tip Amount</string>
     <string name="Total_Price">Total Price</string>
     <string name="Compute">Compute</string>
     <string name="Split">Split</string>
     <string name="PerPerson">Price Per Person</string>
+    <string name="Hint">Number of People</string>
+
+    <!-- Sales Tax Calculator Values -->
+    <string name="Cost">Enter Cost/Price $:</string>
+    <string name="Tax">Enter Sales Tax %:</string>
+    <string name="Tax_total">Total Tax:</string>
+    <string name="Cost_total">Total Cost:</string>
+
 
 </resources>

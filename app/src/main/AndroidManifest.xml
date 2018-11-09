@@ -26,12 +26,18 @@
                 android:parentActivityName=".MainActivity">
         </activity>
         <activity
-                android:name=".Area"
+                android:name=".BMI"
                 android:parentActivityName=".MainActivity">
         </activity>
         <activity
-                android:name=".BMI"
+                android:name=".CubeActivity"
                 android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+                android:name=".ConeActivity"
+                android:parentActivityName=".CubeActivity">
+        </activity>
+        <activity android:name=".SphereActivity">
         </activity>
     </application>
 

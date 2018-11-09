@@ -66,6 +66,7 @@
                   android:layout_height="wrap_content"
                   android:inputType="number"
                   android:id="@+id/Persons"
+                  android:hint="@string/Hint"
         />
     </LinearLayout>
 
